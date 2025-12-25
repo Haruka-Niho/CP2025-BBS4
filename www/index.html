@@ -123,6 +123,7 @@ function createPost(author, content) {
         showMessage('投稿が完了しました！');
         $('#contentInput').val('');
         updateCharacterCount('contentInput', 'contentCount', 1000);
+        $('#contentCount').text('残り1000文字');
     })
     .catch((error) => {
         showMessage('投稿に失敗しました：' + error.message, 'error');
