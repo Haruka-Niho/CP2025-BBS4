@@ -504,6 +504,13 @@ $(function() {
     // 投稿一覧表示順序選択
     $('#sortOrder').on('change', loadPosts);
 
+    // 背景色変更
+    $('#themeSelect').on('change', function () {
+        const theme = $('#themeSelect').val();
+        $('body').removeClass('bg-light bg-blue bg-pink bg-dark');
+        $('body').addClass(theme);
+    });
+
     // 投稿一覧の初期読み込み
     loadPosts();
 });
@@ -550,12 +557,12 @@ window.addEventListener('unload', () => {
         </div>
 
         <!-- 背景色変更 -->
-        <div class="change background color">
+        <div class="change-background-color">
             <label>背景色：</label>
             <select id="themeSelect" class="form-control">
                 <option value="bg-light">ライト</option>
                 <option value="bg-blue">ブルー</option>
-                <option value="bg-green">ピンク</option>
+                <option value="bg-pink">ピンク</option>
                 <option value="bg-dark">ダーク</option>
             </select>
         </div>
