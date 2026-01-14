@@ -28,6 +28,16 @@ body {
     margin: 0 auto;
 }
 
+.bg-dark h1,
+.bg-dark label {
+    color: #eceff1;
+}
+
+.bg-dark .posts-container h2,
+.bg-dark .post-updated {
+    color: #ffffff;
+}
+
 h1 {
     font-size: 24px;
     color: #333;
